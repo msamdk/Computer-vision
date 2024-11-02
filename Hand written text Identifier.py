@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 from PIL import Image, ImageOps, ImageGrab
 
 
- Load the dataset
+ #Load the dataset
 def load_images(file_path):
     with open(file_path, 'rb') as file:
         # Read magic number, number of images, rows, and columns
@@ -39,7 +39,7 @@ def load_labels(file_path):
         labels = np.fromfile(file, dtype=np.uint8)
         return to_categorical(labels, 10)  # One-hot encode the labels
 
-base_path = r"your path......"
+base_path = r"your path for the datasets......"
 
 # Load training and test data using the modified path
 train_images = load_images(f"{base_path}\\train-images.idx3-ubyte")
